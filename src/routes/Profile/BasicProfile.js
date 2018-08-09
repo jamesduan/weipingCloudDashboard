@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
-import { Card, Badge, Table, Divider } from 'antd';
+import { Card, Badge, Table, Divider, Button } from 'antd';
 import DescriptionList from 'components/DescriptionList';
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 import styles from './BasicProfile.less';
+import baseStyles from '../../common/styles/wpcbutton.less'
 
 const { Description } = DescriptionList;
 
@@ -144,6 +145,11 @@ export default class BasicProfile extends Component {
     return (
       <PageHeaderLayout title="基础详情页">
         <Card bordered={false}>
+
+          {/* <Button className={baseStyles.wpcButtonL}>大按钮</Button>
+          <Button className={baseStyles.wpcButtonN}>通用按钮</Button>
+          <Button className={baseStyles.wpcButtonS}>最小按钮</Button> */}
+          <Button className={baseStyles.wpcButtonL}>大按钮</Button>
           <DescriptionList size="large" title="退款申请" style={{ marginBottom: 32 }}>
             <Description term="取货单号">1000000000</Description>
             <Description term="状态">已取货</Description>

@@ -1,0 +1,54 @@
+// author: james
+@import './wpccolor.less';
+.wpc-radius {
+    border-radius: 2px;
+    border-width: 0px;
+}
+
+.wpc-button(@height: 40px, @fontSize: 16px, @paddingH: 20px) {
+    .wpc-radius;
+    background-color: @wpc-color;
+    height: @height;
+    font-size: @fontSize;
+    color: #fff;
+    padding-left: @paddingH;
+    padding-right: @paddingH;
+    &:hover {
+        background-color: @wpc-hover-color;
+        color: #fff;
+    }
+    ;
+    &[disabled] {
+        background-color: @wpc-disabled-color;
+        opacity: 0.5;
+        color: #fff;
+        &:hover {
+            background-color: @wpc-disabled-color;
+            opacity: 0.5;
+            color: #fff;
+        }
+    }
+    ;
+    &:focus {
+        background-color: @wpc-color;
+        color: #fff;
+    }
+    ;
+    &:active {
+        background-color: @wpc-color;
+        color: #fff;
+    }
+    ;
+}
+
+.wpcButtonL {
+    .wpc-button;
+}
+
+.wpcButtonN {
+    .wpc-button(32px, 14px, 20px);
+}
+
+.wpcButtonS {
+    .wpc-button(26px, 12px, 16px);
+}
